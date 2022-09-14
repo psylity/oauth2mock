@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mock oauth2 server</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='simple.min.css') }}">
+</head>
+<body>
+<h1>mock oauth2 server</h1>
+    <p>This oauth2 server allows everything :)</p>
+
+    <p>Use the following values to configure your oauth2 client:</p>
+<pre><code>authorize_url: {{ authorize_url }}
+token_url: {{ token_url }}
+profile_url: {{ profile_url }}
+client_id: *anything*
+client_secret: *anything*
+redirect_url: *your-app-defined*
+callback_url: *your-app-defined*
+</code></pre>
+</body>
+</html>
