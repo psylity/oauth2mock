@@ -21,8 +21,9 @@ def create_routes_bp(config):
     def oauth2_authorize():
         if request.method == 'GET':
             fields = {}
-            for field in ['response_type', 'client_id', 'scope', 'redirect_uri']:
+            for field in ['response_type', 'client_id', 'scope']:
                 fields[field] = request.args.get(field)
+            fields['redirect_uri'] = request.args.get('redirect_url')
             fields['user_json'] = json.dumps(config.default_userdata, indent=2)
             return render_template('authorize.html', **fields)
 
