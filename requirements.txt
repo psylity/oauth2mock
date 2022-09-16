@@ -1,2 +1,3 @@
+setuptools
 Flask
 Authlib
